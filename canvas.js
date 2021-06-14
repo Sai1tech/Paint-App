@@ -86,7 +86,6 @@ b.addEventListener("click", () => {
     removeClassSelect(e);
     b.classList.add("select");
     c.fillStyle = prevactivecolor;
-    prevactivesquare.classList.add("active");
 })
 
 e.addEventListener("click", () => {
