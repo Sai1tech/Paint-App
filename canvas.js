@@ -83,10 +83,10 @@ var b = document.getElementById("b");
 var e = document.getElementById("e");
 
 b.addEventListener("click", () => {
-    c.fillStyle = prevactivecolor;
-    prevactivesquare.classList.add("active");
     removeClassSelect(e);
     b.classList.add("select");
+    c.fillStyle = prevactivecolor;
+    prevactivesquare.classList.add("active");
 })
 
 e.addEventListener("click", () => {
