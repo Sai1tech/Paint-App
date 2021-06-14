@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Cell Task-1</title>
+    <script src="https://kit.fontawesome.com/5946c386be.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=ABeeZee:ital@1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/all.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="heading">
+        <div id="P1">P</div>
+        <div id="A1">A</div>
+        <div id="I">I</div>
+        <div id="N">N</div>
+        <div id="T">T</div>
+        <div id="A2">A</div>
+        <div id="P2">P</div>
+        <div id="P3">P</div>
+    </div>
+    <div class="container">
+        <div class="painttools">
+            <div class="brush"><i class="fas fa-paint-brush select" id="b"></i></div>
+            <div class="eraser"><i class="fas fa-eraser" id="e"></i></div>
+            <div class="colors">
+                <div class="color-circle" data-color="red" onclick="selectcolor(this)"></div>
+                <div class="color-circle" data-color="yellow" onclick="selectcolor(this)"></div>
+                <div class="color-circle" data-color="green" onclick="selectcolor(this)"></div>
+                <div class="color-circle" data-color="orange" onclick="selectcolor(this)"></div>
+                <div class="color-circle" data-color="blue" onclick="selectcolor(this)"></div>
+                <div class="color-circle" data-color="white" onclick="selectcolor(this)"></div>
+            </div>
+            <div class="changecolor">
+                <label for="favcolor">Color</label>
+                <input type="color" name="favcolor" id="favcolor" value="#000000" onchange="favcolor(this)">
+            </div>
+            <div class="brushsize">
+                <label for="brushsize">Brush Size</label>
+                <input type="range" name="brushsize" id="brushsize" value="5" min="5" max="50" step="5" onchange="sizechange(this.value)">
+            </div>
+        </div>
+
+        <div class="savenclear">
+            <div id="save"><a href="" download="my_painting.png"> <i class="far fa-save"></i> Save</a></div>
+            <div id="refresh"> <i class="fas fa-sync-alt"></i> <strong>Refresh</strong></div>
+        </div>
+    </div>
+    
+    <div class="board">
+        <canvas></canvas>
+    </div>
+    <script src="canvas.js"></script>
+</body>
+</html>

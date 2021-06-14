@@ -1,0 +1,171 @@
+* {
+    box-sizing: border-box;
+}
+
+.heading {
+    display: flex;
+    justify-content: space-evenly;
+    font-style: bolder;
+    font-size: 32px;
+    width: 30%;
+    margin: auto;
+    margin-bottom: 25px;
+    border: 2px groove chartreuse;
+    box-shadow: chartreuse 5px 5px;
+}
+
+#P1 {
+    color: green;
+}
+#A1 {
+    color: orangered;
+}
+#I {
+    color: blue;
+}
+#N {
+    color: hotpink;
+}
+#T {
+    color: violet;
+}
+#A2 {
+    color: burlywood;
+}
+#P2 {
+    color: crimson;
+}
+#P3 {
+    color: skyblue;
+}
+
+body {
+    margin: 5px 10px 0;
+    font-size: 25px;
+    font-family: 'ABeeZee', sans-serif;
+    font-weight: bold;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.painttools {
+    width: 50%;
+    margin-left: 40px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.savenclear { /* div */
+    width: 30%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: black;
+}
+
+.colors {
+    width: 100px;
+    height: 60px;
+}
+
+.brushsize {
+    display: flex;
+    flex-direction: column-reverse;
+    text-align: center;
+}
+
+.fa-paint-brush, .fa-eraser {
+    background: whitesmoke;
+    border-radius: 50%;
+    padding: 8px;
+}
+
+.color-circle {
+    width: 30%;
+    margin: 1px;
+    height: 50%;
+    float: left;
+    border: 0.5px solid black;
+}
+
+.color-circle:hover {
+    cursor: pointer;
+}
+
+.color-circle:nth-child(1) {
+    background: red;
+}
+
+.color-circle:nth-child(2) {
+    background: yellow;
+}
+
+.color-circle:nth-child(3) {
+    background: green;
+}
+
+.color-circle:nth-child(4) {
+    background: orange;
+}
+
+.color-circle:nth-child(5) {
+    background: blue;
+}
+
+.color-circle:nth-child(6) {
+    background: white;
+}
+
+.active {
+    border: 3px solid black;
+}
+
+#refresh {
+    text-align: center;
+    padding-top: 5px;
+    width: 150px;
+    height: 40px;
+    background: cyan;
+    border-radius: 30px;
+}
+
+#refresh:hover {
+    cursor: pointer;
+    background: orangered;
+    color: white;
+}
+
+#save {
+    text-align: center;
+    padding-top: 5px;
+    width: 150px;
+    height: 40px;
+    background: cyan;
+    border-radius: 30px;
+}
+
+#save:hover {
+    cursor: pointer;
+    background: rgb(0, 255, 106);
+}
+
+.board {
+    margin-top: 20px;
+}
+
+.select {
+    border: 1px solid black;
+    background: darkgrey;
+}
+
+canvas {
+    border: 1px dashed black;
+    margin-top: auto;   
+}
