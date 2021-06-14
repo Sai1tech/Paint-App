@@ -1,12 +1,15 @@
 var canvas = document.querySelector('canvas');
 canvas.width = 1513;
 canvas.height = 580;
-var colorcircle = document.querySelectorAll('.color-circle');
+var colorsquare = document.querySelectorAll('.color-square');
 let brushSize = 5;
 var isDrawing;
 let x;
 let y;
 var c = canvas.getContext("2d");
+
+var prevactivecolor;
+var prevactivesquare;
 
 canvas.addEventListener("mousedown", (e) => {
     isDrawing = true;
@@ -56,7 +59,7 @@ document.getElementById('refresh').addEventListener('click', () => {
 
 var selectcolor = (elem) => {
     removeClassActive();
-
+    prevactivesquare = elem;
     c.fillStyle = elem.getAttribute("data-color");
     elem.classList.add("active");
     removeClassSelect(e);
@@ -64,7 +67,7 @@ var selectcolor = (elem) => {
 }
 
 function removeClassActive() {
-    colorcircle.forEach((circle) => {
+    colorsquare.forEach((circle) => {
         circle.classList.remove("active");
     });
 }
@@ -80,13 +83,15 @@ var b = document.getElementById("b");
 var e = document.getElementById("e");
 
 b.addEventListener("click", () => {
+    c.fillStyle = prevactivecolor;
+    prevactivesquare.classList.add("active");
     removeClassSelect(e);
     b.classList.add("select");
-    
 })
 
 e.addEventListener("click", () => {
     removeClassSelect(b);
+    prevactivecolor = c.fillStyle;
     e.classList.add("select");
     c.fillStyle = "white";
     removeClassActive();

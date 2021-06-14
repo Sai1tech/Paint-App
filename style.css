@@ -87,7 +87,7 @@ a {
     padding: 8px;
 }
 
-.color-circle {
+.color-square {
     width: 30%;
     margin: 1px;
     height: 50%;
@@ -95,31 +95,31 @@ a {
     border: 0.5px solid black;
 }
 
-.color-circle:hover {
+.color-square:hover {
     cursor: pointer;
 }
 
-.color-circle:nth-child(1) {
+.color-square:nth-child(1) {
     background: red;
 }
 
-.color-circle:nth-child(2) {
+.color-square:nth-child(2) {
     background: yellow;
 }
 
-.color-circle:nth-child(3) {
+.color-square:nth-child(3) {
     background: green;
 }
 
-.color-circle:nth-child(4) {
+.color-square:nth-child(4) {
     background: orange;
 }
 
-.color-circle:nth-child(5) {
+.color-square:nth-child(5) {
     background: blue;
 }
 
-.color-circle:nth-child(6) {
+.color-square:nth-child(6) {
     background: white;
 }
 
